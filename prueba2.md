@@ -15,7 +15,7 @@ La tabla principal de nuestra aplicación tiene el siguiente formato:
 
 | Campo | Tipo | Descripción |
 | :--- | :--- | :--- |
-| 
+| `Tabla profesorado`  |
 | :--- | :--- | :--- |
 | `id` | Integer | Clave primaria autoincremental |
 | `profesor` | String | Nombre de profesor (único) |
