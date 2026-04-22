@@ -1,41 +1,70 @@
 ---
-title: Sistema de Gestión de Usuarios (UserCRUD)
-version: 1.0.0
-author: Equipo de Desarrollo
-status: En Desarrollo
+title: "Ejercicio de Documentación: Proyecto UserAdmin"
+author: "Alumno/a de Ciclo Formativo"
+date: "2023-10-27"
+category: "Desarrollo de Software"
+tags: [markdown, tutorial, python, crud]
 ---
 
-# UserCRUD Python API 🐍
+# 🚀 Documentación del Proyecto: UserAdmin API
 
-![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python Version](https://img.shields.io/badge/python-3.9%2B-brightgreen.svg)
+Bienvenidos al manual de la aplicación **UserAdmin**. Este documento sirve como ejercicio práctico para dominar el lenguaje de marcado *Markdown*.
 
-Sistema avanzado para la gestión de usuarios (Create, Read, Update, Delete) utilizando Python, FastAPI y SQLAlchemy.
+---
 
-## 📖 Índice
-- [Descripción General](#descripción-general)
-- [Arquitectura del Sistema](#arquitectura-del-sistema)
-- [Instalación](#instalación)
-- [Uso de la API](#uso-de-la-api)
-- [Lógica de Negocio](#lógica-de-negocio)
-- [Tareas Pendientes](#tareas-pendientes)
+## 📋 Índice
+1. [Descripción General](#descripción-general)
+2. [Guía de Instalación](#guía-de-instalación)
+3. [Estructura de la Base de Datos](#estructura-de-la-base-de-datos)
+4. [Lógica del Sistema](#lógica-del-sistema)
+5. [Ejemplos de Código](#ejemplos-de-código)
 
 ---
 
 ## Descripción General
-Esta aplicación permite centralizar la administración de identidades. Implementa validaciones de seguridad y persistencia en base de datos relacional.
+Esta aplicación permite realizar operaciones **CRUD** (Crear, Leer, Actualizar y Borrar) sobre una base de datos de usuarios. Es fundamental seguir las normas de seguridad establecidas[^1].
 
-> **Nota Importante:** Este sistema requiere una instancia de PostgreSQL activa para el almacenamiento de datos.
+> "La documentación es tan importante como el código mismo."  
+> — *Anónimo del desarrollo.*
 
-## Arquitectura del Sistema
+---
 
-El flujo de creación de un usuario sigue la siguiente lógica:
+## Guía de Instalación
+
+Para configurar el entorno, sigue estos pasos:
+
+1.  **Clonar el repositorio:** `git clone https://github.com/usuario/proyecto.git`
+2.  **Crear el entorno virtual:**
+    * Windows: `python -m venv venv`
+    * Linux/macOS: `python3 -m venv venv`
+3.  **Instalar dependencias:** Consulta el archivo [requirements.txt](https://ejemplo.com/requirements.txt).
+
+### Recursos Visuales
+A continuación se muestra el logotipo del proyecto:
+
+![Logo UserAdmin](https://via.placeholder.com/150/000000/FFFFFF?text=UserAdmin+Logo)
+
+---
+
+## Estructura de la Base de Datos
+La tabla principal de nuestra aplicación tiene el siguiente formato:
+
+| Campo | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `id` | Integer | Clave primaria autoincremental |
+| `username` | String | Nombre de usuario (único) |
+| `email` | String | Correo electrónico validado |
+| `status` | Boolean | Estado de activación |
+
+---
+
+## Lógica del Sistema
+El proceso de registro de un nuevo usuario sigue el flujo mostrado en este diagrama:
 
 ```mermaid
-graph TD
-    A[Cliente] -->|POST /users| B(Validador de Esquema)
-    B -->|Éxito| C{¿Existe Usuario?}
-    C -- No --> D[Cifrar Contraseña]
-    C -- Sí --> E[Retornar Error 400]
-    D --> F[(Base de Datos)]
-    F --> G[Retornar Usuario Creado]
+graph LR
+    A[Formulario Registro] --> B{Validar Datos}
+    B -- Error --> C[Mostrar Alerta]
+    B -- OK --> D[Cifrar Password]
+    D --> E[(Guardar en DB)]
+    E --> F[Enviar Email Confirmación]
