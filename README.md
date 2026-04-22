@@ -42,7 +42,7 @@ Para configurar el entorno, sigue estos pasos:
 ### Recursos Visuales
 A continuación se muestra el logotipo del proyecto:
 
-![Logo UserAdmin](https://via.placeholder.com/150/000000/FFFFFF?text=UserAdmin+Logo](https://media.licdn.com/dms/image/v2/D4E0BAQFJSAzGQSuQwA/company-logo_200_200/company-logo_200_200/0/1686260263148/iesfuengirola1_logo?e=2147483647&v=beta&t=umIZhlcx_bBRVxZBi6yzjDubnI7Jd7-GfqUdLY4JH_4)](https://www.iesfuengirola1.es/wp-content/uploads/2023/03/logo_web_p-1.png)
+![Logo UserAdmin](https://www.iesfuengirola1.es/wp-content/uploads/2023/03/logo_web_p-1.png)
 
 ---
 
