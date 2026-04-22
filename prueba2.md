@@ -9,3 +9,13 @@ Tags: PHP, Python
 Aplicación para la automatización de guardias del Instituto desarrollada en Python, PHP y base de datos MariaDB
 
 ## Índice
+
+## Estructura de la Base de Datos
+La tabla principal de nuestra aplicación tiene el siguiente formato:
+
+| Campo | Tipo | Descripción |
+| :--- | :--- | :--- |
+| `id` | Integer | Clave primaria autoincremental |
+| `profesor` | String | Nombre de usuario (único) |
+| `email` | String | Correo electrónico validado |
+| `status` | Boolean | Estado de activación |
