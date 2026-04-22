@@ -15,7 +15,9 @@ La tabla principal de nuestra aplicación tiene el siguiente formato:
 
 | Campo | Tipo | Descripción |
 | :--- | :--- | :--- |
+| 
+| :--- | :--- | :--- |
 | `id` | Integer | Clave primaria autoincremental |
-| `profesor` | String | Nombre de usuario (único) |
-| `email` | String | Correo electrónico validado |
-| `status` | Boolean | Estado de activación |
+| `profesor` | String | Nombre de profesor (único) |
+| `horario` | String | String con horas |
+| `dia_semana` | Integer | Día de la semana de guardia |
